@@ -17,7 +17,7 @@ export async function getAllPost( req: Request, res: Response) {
 
 export async function getPost( req: Request, res: Response, ) {
     try {
-        const id = parseInt(req.params.id, 10)
+        const id = parseInt(req.params.id)
         const post = await prisma.post.findUnique({
             where: {id}
         }) 
